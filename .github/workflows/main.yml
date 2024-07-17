@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  prueba_repo_job:
+    runs-on: ubuntu-latest
+    name: A job to say this is a example
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Prueba repo action step
+        uses: ./        
+	id: hello
+        with:
+          example-github-actions: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
