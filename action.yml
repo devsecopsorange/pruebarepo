@@ -1,0 +1,17 @@
+# action.yml
+name: 'Prueba repo'
+description: 'Prueba de Github Actions'
+inputs:
+  example-github-actions:  # id of input
+    description: 'This is a example'
+    required: true
+    default: 'Example'
+outputs:
+  time: # id of output
+    description: 'Example is working'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.example-github-actions }}
+
