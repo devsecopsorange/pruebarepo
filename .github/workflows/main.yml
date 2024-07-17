@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Prueba repo action step
-        uses: ./        
+        uses: actions/prueba-repo-docker-action@v2        
 	id: hello
         with:
           example-github-actions: 'Mona the Octocat'
